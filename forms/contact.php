@@ -7,21 +7,21 @@
   */
 
   // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'arasgungore09@gmail.com';
+  // $receiving_email_address = 'uttej123kumar@gmail.com';
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
-  }
+  // if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
+  //   include( $php_email_form );
+  // } else {
+  //   die( 'Unable to load the "PHP Email Form" Library!');
+  // }
 
-  $contact = new PHP_Email_Form;
-  $contact->ajax = true;
+  // $contact = new PHP_Email_Form;
+  // $contact->ajax = true;
   
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
+  // $contact->to = $receiving_email_address;
+  // $contact->from_name = $_POST['name'];
+  // $contact->from_email = $_POST['email'];
+  // $contact->subject = $_POST['subject'];
 
   // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
   /*
@@ -33,9 +33,37 @@
   );
   */
 
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
+  // $contact->add_message( $_POST['name'], 'From');
+  // $contact->add_message( $_POST['email'], 'Email');
+  // $contact->add_message( $_POST['message'], 'Message', 10);
 
-  echo $contact->send();
+  // echo $contact->send();
+  
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $to = "uttej123kumar@gmail.com";
+    $subject = strip_tags($_POST['subject']);
+    $name = strip_tags($_POST['name']);
+    $email = strip_tags($_POST['email']);
+    $message = strip_tags($_POST['message']);
+
+    $headers = "From: $name <$email>" . "\r\n" .
+               "Reply-To: $email" . "\r\n" .
+               "Content-Type: text/plain; charset=UTF-8";
+
+    $body = "Name: $name\n";
+    $body .= "Email: $email\n\n";
+    $body .= "Message:\n$message\n";
+
+    if (mail($to, $subject, $body, $headers)) {
+        echo "Message sent successfully!";
+    } else {
+        http_response_code(500);
+        echo "Error sending message.";
+    }
+} else {
+    http_response_code(403);
+    echo "Invalid request.";
+}
 ?>
+
+

@@ -7,7 +7,7 @@ My portfolio website built using HTML, CSS, and JavaScript. You can check it out
 ## Screenshots
 
 <p float="center">
-    <img src="https://github.com/Uttejvluda/My-Portfolio/blob/main/Screenshots/Screenshot%202025-06-23%20200711.png" width="800">
+    <img src="https://github.com/Uttejvluda/My-Portfolio/blob/main/Screenshots/CoverPage.png" width="800">
 </p>
 
 

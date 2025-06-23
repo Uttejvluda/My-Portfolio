@@ -1,6 +1,6 @@
 # arasgungore.github.io
 
-My portfolio website built using HTML, CSS, and JavaScript. You can check it out [here](https://arasgungore.github.io).
+My portfolio website built using HTML, CSS, and JavaScript. You can check it out [here]().
 
 
 
@@ -14,7 +14,7 @@ My portfolio website built using HTML, CSS, and JavaScript. You can check it out
 
 ## Author
 
-👤 **Aras Güngöre**
+👤 **Uttej Kumar Avula**
 
-* LinkedIn: [@arasgungore](https://www.linkedin.com/in/arasgungore)
-* GitHub: [@arasgungore](https://github.com/arasgungore)
+* LinkedIn: [@Uttej](https://www.linkedin.com/in/uttej-kumar-avula/)
+* GitHub: [@Uttej](https://github.com/Uttejvluda)

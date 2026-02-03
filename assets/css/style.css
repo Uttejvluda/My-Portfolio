@@ -1131,3 +1131,31 @@ section .container {
     transform: translateX(-50%);
   }
 }
+/* Publications Card Hover Effect */
+.pub-card {
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.pub-card:hover {
+  transform: translateY(-6px);
+  background: #042e5f !important;
+  border: 1px solid rgba(18, 214, 64, 0.35) !important;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* Title hover */
+.pub-card:hover .pub-title {
+  color: #12d640 !important;
+}
+
+/* Button hover */
+.pub-btn {
+  transition: 0.3s ease;
+}
+
+.pub-btn:hover {
+  background: #0fbf38 !important;
+   /* background: #042e5f; */
+  transform: scale(1.03);
+}

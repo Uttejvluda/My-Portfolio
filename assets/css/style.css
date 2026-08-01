@@ -1159,3 +1159,37 @@ section .container {
    /* background: #042e5f; */
   transform: scale(1.03);
 }
+
+
+
+
+/* SVG icons */
+.social-links .social-svg{
+    width:20px;
+    height:20px;
+    filter: invert(100%);
+    transition:0.3s ease;
+}
+
+/* Google Scholar */
+.social-links .scholar:hover{
+    background:#4285F4;
+}
+
+.social-links .scholar:hover .social-svg{
+    filter: invert(100%);
+}
+
+/* ORCID */
+.social-links .orcid:hover{
+    background:#A6CE39;
+}
+
+/* Academicons */
+.social-links .ai{
+    font-size:20px;
+}
+
+
+
+
